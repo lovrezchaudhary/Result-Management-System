@@ -5,11 +5,11 @@ const StudentMark = require('../models/StudentMark');
 
 const router = express.Router(); // Ensure this line is present
 
-// Multer setup for file upload
+
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
-// File upload route
+
 router.post('/upload/:category', upload.single('file'), async (req, res) => {
   try {
     const { category } = req.params;
@@ -31,4 +31,4 @@ router.post('/upload/:category', upload.single('file'), async (req, res) => {
   }
 });
 
-module.exports = router; // Ensure this line is present
+module.exports = router; 

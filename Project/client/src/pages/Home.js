@@ -13,7 +13,7 @@ const Home = () => {
           <Button variant="outline-light" as={Link} to="/admin" className="m-2">
             Go to Admin Dashboard
           </Button>
-          <Button variant="outline-light" as={Link} to="/student-portal" className="m-2">
+          <Button variant="outline-light" as={Link} to="/student" className="m-2">
             Go to Student Portal
           </Button>
         </Container>
