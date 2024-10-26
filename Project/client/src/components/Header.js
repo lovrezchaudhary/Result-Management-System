@@ -1,18 +1,31 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Navbar, Nav } from 'react-bootstrap';
+import { Navbar, Nav, Container } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 
 const Header = () => {
   return (
-    <Navbar bg="light" expand="lg">
-      <Navbar.Brand as={Link} to="/admin">Result Management System</Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="ml-auto">
-          <Nav.Link as={Link} to="/admin">Admin Dashboard</Nav.Link>
-          <Nav.Link as={Link} to="/student">Student Portal</Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
+    <Navbar expand="lg" className="shadow-sm" style={{ backgroundColor: '#0D92F4' }}>
+      <Container>
+        <LinkContainer to="/">
+          <Navbar.Brand className="text-white font-weight-bold">
+            Result Management System
+          </Navbar.Brand>
+        </LinkContainer>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ms-auto">
+            <LinkContainer to="/">
+              <Nav.Link className="text-white">Home</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/admin">
+              <Nav.Link className="text-white">Admin Dashboard</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/student">
+              <Nav.Link className="text-white">Student Portal</Nav.Link>
+            </LinkContainer>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
     </Navbar>
   );
 };
